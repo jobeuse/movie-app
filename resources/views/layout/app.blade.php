@@ -27,8 +27,8 @@
    @livewireStyles
    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body class="font-sans bg-gray-900 text-white">
-<nav class="border-b border-gray-800">
+<body class="font-sans bg-gray-400 text-white">
+<nav class="border-b bg-gray-800">
   <div class="container px-4 mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-6 ">
     <ul class="flex items-center"> 
         <li><a href="{{route('movie') }}" class="bg-gray-800">
@@ -43,7 +43,9 @@
     <div class="flex items-center md:mt-3 sm:mt-3">
         <livewire:search-drop-down/>
         <div class="ml-6">
-          <img src="https://via.placeholder.com/150" class="rounded-full w-8" alt="">
+          <a href="https://github.com/jobeuse" target="_blank">
+            <img src="https://avatars.githubusercontent.com/u/62539654?v=4" class="rounded-full w-8" alt="">
+          </a>
         </div>
     </div>
     

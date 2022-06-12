@@ -1,8 +1,8 @@
-<div class="mt-8">
+<div class="mt-8  bg-gray-800 shadow rounded">
     <a href="{{ route('tv.show',$tvshow['id']) }}">
-        <img src="{{ 'https://image.tmdb.org/t/p/w500/'.$tvshow['poster_path'] }}" class="hover:opacity-75 transition ease-in-out duration-150" alt="image">
+        <img src="{{ 'https://image.tmdb.org/t/p/w500/'.$tvshow['poster_path'] }}" class="rounded hover:opacity-75 transition ease-in-out duration-150" alt="image">
     </a>
-    <div class="mt-2">
+    <div class="mt-2 py-3 px-3">
         <a href="" class="text-lg mt-2 hover:text-gray:300">{{ $tvshow['name'] }}</a>
         <div class="flex items-center text-gray-400 text-sm mt-2">
             <span><svg class="svg-icon  fill-current text-orange-500 w-5" viewBox="0 0 20 20">

@@ -7,7 +7,7 @@
 		</h2>
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
 			@forelse($ActorMovies as $actor)  
-            <div class="actor mt-8">
+            <div class="actor mt-8 bg-gray-800 shadow rounded">
                 <a href=""> 
                     @if($actor['profile_path'] )
                     <img src="{{ 'https://image.tmdb.org/t/p/w500/'.$actor['profile_path'] }}" class="hover:opacity-75 transition ease-in-out duration-150" alt="image">
@@ -15,7 +15,7 @@
                     <img src="https://via.placeholder.com/500"  class="hover:opacity-75 transition ease-in-out duration-150" alt="image">
                  @endif
                      </a>
-                <div class="mt-2">
+                <div class="mt-2 py-3 px-3">
                     <a href="" class="text-lg hover:text-gray-300"> 
                         {{ $actor['name'] }}
                     </a>
