@@ -6,12 +6,12 @@
 			Popular Movies 
 		</h2>
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-			@forelse($popularMovies as $movie) 
-				<x-movie-card :movie="$movie" :genres="$genres"/>
+			@forelse($popularTv as $tvshow) 
+				<x-tv-show-card :tvshow="$tvshow" :genres="$genres"/>
 			@empty
 
 			<div class="bg-red-500 py-23">
-				No movies added
+				No TvShow added
 			</div>
 			@endforelse 
 		</div>
@@ -19,16 +19,16 @@
 
 	<div class="now-playing-movies py-24">
 		<h2 class="uppercase tracking-wider font-semibold text-orange-500 text-lg "> 
-			Now Playing
+            Top Rated TvShow
 		</h2>
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-			@forelse($nowPlayingMovies as $movie) 
-				<x-movie-card :movie="$movie" :genres="$genres"/>	
+			@forelse($TopRatedTv as $tvshow) 
+				<x-tv-show-card :tvshow="$tvshow" :genres="$genres"/>	
 				
 			@empty
 
 			<div class="bg-red-500 py-23">
-				No movies added
+				No TvShow added
 			</div>
 			@endforelse
 

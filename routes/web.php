@@ -2,16 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MoviesController;
+use App\Http\Controllers\ActorsController;
+use App\http\Controllers\TvController;
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/welcome', function () {
+ 
+    return view('welcome');
+})->name('welcome');
 
-Route::get('/movie', function () {
-     $popularMovies=Http::withToken(config('698e2ed7adec5c43d05f615374de9c46'))->get('https://api.themoviedb.org/3/movie/popular')->json();//['Results'];
-        dd($popularMovies);
-    return view('show');
-});
+Route::get('/',[MoviesController::class,'index'])->name('movie');
 
+Route::get('/movie/{id}/show',[MoviesController::class, 'show'])->name('movie.show');
+Route::get('/actors',[ActorsController::class,'index'])->name('actors');
 
-//Route::get('/index',MoviesController::class,'index');
+Route::get('/tvshows',[TvController::class,'index'])->name('tv');
+Route::get('/tv/{id}/show',[TvController::class, 'show'])->name('tv.show');
