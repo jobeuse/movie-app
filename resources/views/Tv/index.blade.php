@@ -2,29 +2,29 @@
 @section('content')
 <div class="container mx-auto px-4 pt-16">
 	<div class="popula-movies">
-		<h2 class="uppercase tracking-wider font-semibold text-orange-500 text-lg "> 
-			Popular Movies 
+		<h2 class="uppercase tracking-wider font-semibold text-orange-500 text-lg ">
+			Popular TvShow
 		</h2>
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-			@forelse($popularTv as $tvshow) 
+			@forelse($popularTv as $tvshow)
 				<x-tv-show-card :tvshow="$tvshow" :genres="$genres"/>
 			@empty
 
 			<div class="bg-red-500 py-23">
 				No TvShow added
 			</div>
-			@endforelse 
+			@endforelse
 		</div>
 	</div>
 
 	<div class="now-playing-movies py-24">
-		<h2 class="uppercase tracking-wider font-semibold text-orange-500 text-lg "> 
+		<h2 class="uppercase tracking-wider font-semibold text-orange-500 text-lg ">
             Top Rated TvShow
 		</h2>
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-			@forelse($TopRatedTv as $tvshow) 
-				<x-tv-show-card :tvshow="$tvshow" :genres="$genres"/>	
-				
+			@forelse($TopRatedTv as $tvshow)
+				<x-tv-show-card :tvshow="$tvshow" :genres="$genres"/>
+
 			@empty
 
 			<div class="bg-red-500 py-23">
