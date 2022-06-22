@@ -26,6 +26,15 @@
   </style>
    @livewireStyles
    <script src="//unpkg.com/alpinejs" defer></script>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1L5HELFTE1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1L5HELFTE1');
+</script>
 </head>
 <body class="font-sans bg-gray-400 text-white">
 <nav class="border-b bg-gray-800">
